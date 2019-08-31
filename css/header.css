@@ -1,0 +1,134 @@
+.header {
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: minmax(160px, auto) minmax(auto, 400px) minmax(270px, auto);
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+}
+/* BUSCA */
+.busca form {
+  display: grid;
+}
+
+.busca #s {
+  background: #D8CFC5;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 40px 15px 15px;
+  font-size: 1.125rem;
+  grid-area: 1/1;
+  color: #1E1A10;
+}
+
+.busca #s::placeholder {
+  color: #807A6C;
+}
+
+.busca #searchbutton {
+  grid-area: 1/1;
+  width: 50px;
+  justify-self: end;
+  text-indent: -100px;
+  border: none;
+  background: transparent url('../img/icons/search.svg') no-repeat center center;
+  cursor: pointer;
+}
+
+.conta {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
+  /* justify-content: end; */
+}
+
+
+.conta .minha-conta,
+.conta .carrinho {
+  color: #1E1A10;
+  font-size: 1.125rem;
+  font-family: Georgia, serif;
+  padding: 5px 0px 5px 30px;
+}
+
+.conta .minha-conta {
+  background: url('../img/icons/user.svg') no-repeat center left;
+}
+
+.conta .carrinho {
+  background: url('../img/icons/cart.svg') no-repeat center left;
+  position: relative;
+}
+
+.carrinho-count {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-family: Georgia, serif;
+  font-size: 0.875rem;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #FFF;
+  background: #806019;
+}
+
+.header-menu {
+  background: #4C483D;
+  padding: 20px;
+}
+
+.header-menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.header-menu li + li {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu li + li::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin: 15px;
+  border: solid 1px #FFF;
+  transform: rotate(45deg);
+}
+
+.header-menu a {
+  display: block;
+  color: #FFF;
+  padding: 10px 0px;
+  font-family: Georgia, serif;
+  font-size: 1.125rem;
+}
+
+.header-menu a:hover, 
+.header-menu .current-menu-item a {
+  color: #DFBC7A;
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .header-menu ul {
+    justify-content: initial;
+  }
+}
