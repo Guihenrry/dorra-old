@@ -28,4 +28,7 @@ function dorra_custom_images() {
 }
 add_action('after_setup_theme', 'dorra_custom_images');
 
+// Incluir funções que formata e lista produtos
+include(get_template_directory() . '/inc/product-list.php');
+
 ?>

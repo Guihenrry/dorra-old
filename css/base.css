@@ -39,3 +39,49 @@ img {
   display: none;
 }
 
+/* SUBTITULO */
+.subtitulo {
+  font-family: Georgia, serif;
+  color: #1E1A10;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 15px;
+  margin: 30px 0;
+  border-bottom: 1px solid #CCBDAD;
+  position: relative;
+}
+
+.subtitulo::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #CCBDAD;
+  background: #EBE5DF;
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: rotate(45deg);
+}
+
+/* BTN LINK */
+.btn-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  background: #FFF;
+  color: #1E1A10;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-link::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 12px;
+  background: transparent url('../img/icons/seta.svg') no-repeat center center;
+}

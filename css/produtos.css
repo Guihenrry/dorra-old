@@ -1,0 +1,95 @@
+/* LISTA DE PRODUTOS */
+.prudutos-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .prudutos-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 460px) {
+  .prudutos-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PRODUTO ITEM */
+.produto-item {
+  position: relative;
+}
+
+.produto-item .preco {
+  font-family: Georgia, serif;
+  font-size: 1.125rem;
+  color: #1E1A10;
+  background: #CCBDAD;
+  padding: 10px 15px;
+  position: relative;
+  top: -15px;
+}
+
+.produto-item .preco del{
+  color: #807A6C;
+}
+
+.produto-item h2{
+  font-family: Georgia, serif;
+  font-size: 1.125rem;
+  color: #1E1A10;
+}
+
+.produto-item p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  color: #8A8274;
+}
+
+/* OVERLAY */
+.produto-item a {
+  display: grid;
+}
+
+.produto-info {
+  grid-area: 1/1;
+}
+
+.produto-overlay {
+  opacity: 0;
+  grid-area: 1/1;
+  background: rgba(30, 26, 16, 0.2);
+  z-index: 1;
+  display: flex;
+  transition: opacity .3s;
+}
+
+.produto-overlay .btn-link {
+  width: 100%;
+}
+
+.produto-overlay:hover {
+  opacity: 1;
+} 
+
+.produto-overlay span {
+  margin: auto; 
+}
+/* OFERTA */
+.prudutos-lista .oferta::before {
+  content: 'Oferta';
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.6875rem;
+  padding: 5px;
+  border-radius: 5px;
+  background: #1E1A10;
+  color: #FFF;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
