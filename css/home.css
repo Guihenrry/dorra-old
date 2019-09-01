@@ -1,0 +1,10 @@
+/* BANNER */
+.banner img {
+  width: 100%;
+}
+
+[data-slide-nav] {
+  margin-top: 0;
+  position: relative;
+  top: -27px;
+}
