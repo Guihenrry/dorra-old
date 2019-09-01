@@ -8,3 +8,21 @@
   position: relative;
   top: -27px;
 }
+
+/* VANTAGENS */
+.vantagens li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vantagens .icon {
+  margin-right: 10px;
+}
+
+.vantagens p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #1E1A10;
+  margin-right: 10px;
+}

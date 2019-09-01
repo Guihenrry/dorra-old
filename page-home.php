@@ -6,7 +6,7 @@ get_header();
 <?php
   $img_url = get_template_directory_uri() . '/img';
 
-  // Formatar
+  // Formatar Dados do Banner
   $banner = [];
   if (have_rows('banner')) { while(have_rows('banner')) { the_row();
     $id_imagem = get_sub_field('imagem');
@@ -15,7 +15,6 @@ get_header();
       'alt' => get_sub_field('descricao_imagem'),
     ];
   } }
-
 ?>
 
 <section class="banner">
@@ -24,6 +23,17 @@ get_header();
     <li><img src="<?= $item['src']; ?>" alt="<?= $item['alt']; ?>"></li>
     <?php } ?>
   </ul>
+</section>
+
+<section class="vantagens">
+      <ul data-slide="vantagem">
+        <?php if (have_rows('vantagens')) { while(have_rows('vantagens')) { the_row(); ?>
+          <li>
+            <img src="<?php the_sub_field('icone'); ?>" alt="icone" class="icon">
+            <p><?php the_sub_field('texto'); ?></p>
+          </li>
+        <?php } } ?>
+      </ul>
 </section>
 
 <?php if(have_posts()) { while(have_posts()) {  the_post();  ?>
