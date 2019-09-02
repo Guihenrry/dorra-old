@@ -38,7 +38,7 @@ get_header();
 
   $data = [];
   $data['novidades'] = format_products($novidades);
-  $data['slide'] = format_products($produtos_slide);
+  $data['slide'] = format_products($produtos_slide, 'slide');
   $data['mais_populares'] = format_products($mais_populares);
 ?>
 

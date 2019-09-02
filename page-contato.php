@@ -35,15 +35,7 @@ get_header();
 			</ul>
 
 			<h3>Redes Sociais</h3>
-			<ul class="social-icons">
-				<?php if(have_rows('social')) { while(have_rows('social')) { the_row(); ?>
-				<li>
-					<a href="<?php the_sub_field('link'); ?>">
-						<img src="<?php the_sub_field('icone'); ?>" alt="<?php the_sub_field('nome'); ?>">
-					</a>
-				</li>
-				<?php } }?>
-			</ul>
+			<?php include(get_template_directory() . '/inc/redes-sociais.php');?>
 		</section>
 </main>
 

@@ -1,0 +1,85 @@
+.footer {
+  background: #D8CFC5;
+  padding-top: 30px;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-gap: 30px;
+}
+@media (max-width: 800px) {
+  .footer-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-info h3 {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #1E1A10;
+  margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  color: #332D21;
+}
+
+/* SOBRE */
+.footer-sobre p {
+  max-width: 370px;
+}
+/* MAPA DO SITE */
+.mapa-do-site a {
+  display: flex;
+  align-items: center;
+}
+
+.mapa-do-site ul {
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) minmax(100px, 200px);
+}
+
+.mapa-do-site a::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border: solid 1px #332D21;
+  transform: rotate(45deg);
+  margin-right: 5px;
+}
+
+.mapa-do-site a:hover {
+  color: #99782F;
+}
+
+.mapa-do-site a:hover::before {
+  background: #99782F;
+}
+
+/* PAGAMENTO */
+.footer-pagamento {
+  margin-bottom: 30px;
+}
+
+.footer-pagamento ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* COPY */
+.footer-copy {
+  display: block;
+  padding: 15px;
+  background: #4C483D;
+  font-family: Georgia, serif;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #EBE5DF;
+  margin-top: 30px;
+}
