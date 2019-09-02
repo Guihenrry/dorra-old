@@ -31,4 +31,22 @@ add_action('after_setup_theme', 'dorra_custom_images');
 // Incluir funções que formata e lista produtos
 include(get_template_directory() . '/inc/product-list.php');
 
+
+// Rmover algumas class do body_class
+function remove_some_body_class($classes) {
+  $woo_class = array_search('woocommerce', $classes);
+  $woopage_class = array_search('woocommerce-page', $classes);
+  // verifica se é a pagina de arquivo ou produto
+  $is_page = in_array('archive', $classes) || in_array('product-template-default', $classes);
+
+
+  if ($woo_class && $woopage_class && $is_page) {
+    unset($classes[$woo_class]);
+    unset($classes[$woopage_class]);
+  }
+  return $classes;
+
+}
+add_filter('body_class', 'remove_some_body_class');
+
 ?>

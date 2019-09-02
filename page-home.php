@@ -64,7 +64,7 @@ get_header();
 </section>
 
 <section class="container">
-	<h2 class="subtitulo">Novidades</h2>
+	<h2 class="subtitulo separador">Novidades</h2>
 	<?php  dorra_product_list($data['novidades']); ?>
 </section>
 
@@ -88,7 +88,7 @@ get_header();
 </section>
 
 <section class="container">
-	<h2 class="subtitulo">Mais Populares</h2>
+	<h2 class="subtitulo separador">Mais Populares</h2>
 	<?php  dorra_product_list($data['mais_populares']); ?>
 </section>
 
@@ -106,5 +106,4 @@ get_header();
 </section>
 
 <?php } } ?>
-
 <?php get_footer(); ?>

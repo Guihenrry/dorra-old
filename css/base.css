@@ -47,11 +47,14 @@ img {
   text-align: center;
   padding-bottom: 15px;
   margin: 30px 0;
+}
+
+.separador {
   border-bottom: 1px solid #CCBDAD;
   position: relative;
 }
 
-.subtitulo::after {
+.separador::after {
   content: '';
   display: block;
   width: 10px;

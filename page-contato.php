@@ -3,8 +3,10 @@
 get_header();
 ?>
 
+<?php if(have_posts()) { while(have_posts()) {  the_post();  ?>
+
 <main class="container contato">
-  <h1 class="subtitulo">Contato</h1>
+  <h1 class="subtitulo separador">Contato</h1>
   <form action="<?php echo get_template_directory_uri(); ?>/enviar.php" method="post" name="form" class="formphp grid-8 contato_form">
 			<label for="nome">Nome</label>
 			<input id="nome" name="nome" type="text">
@@ -39,4 +41,5 @@ get_header();
 		</section>
 </main>
 
+<?php } } ?>
 <?php get_footer(); ?>
