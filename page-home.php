@@ -68,9 +68,41 @@ get_header();
 	<?php  dorra_product_list($data['novidades']); ?>
 </section>
 
+<section class="slide-wrapper">
+  <ul class="slide">
+    <?php foreach($data['slide'] as $product) {?>
+    <li class="slide-item">
+      <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>">
+      <div class="slide-info">
+        <div>
+          <span class="slide-preco"><?= $product['price']; ?></span>
+          <h2><?= $product['name']; ?></h2>
+        </div>
+        <div>
+          <a href="<?= $product['link']; ?>" class="btn-link">Ver Produto</a>
+        </div>
+      </div>
+    </li>
+    <?php }?>
+  </ul>
+</section>
+
 <section class="container">
 	<h2 class="subtitulo">Mais Populares</h2>
 	<?php  dorra_product_list($data['mais_populares']); ?>
+</section>
+
+<section class="container quotes">
+  <ul data-slide="quote">
+    <?php if(have_rows('quote')) { while(have_rows('quote')) { the_row(); ?>
+    <li>
+      <blockquote>
+        <p><?php the_sub_field('comentario'); ?></p>
+        <cite><?php the_sub_field('autor'); ?></cite>
+      </blockquote>
+    </li>
+    <?php } } ?>
+  </ul>
 </section>
 
 <?php } } ?>
