@@ -1,0 +1,86 @@
+/* FORMULARIO */
+.formphp label.nao-aparece, .formphp input.nao-aparece {
+	display: none !important;
+}
+
+#form-erro span, #form-send span  {
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+#form-send {
+	color: #31aa39;
+}
+
+#form-erro {
+	color: #f64540;
+}
+
+.contato button {
+	border: none;
+	background: #806019;
+	color: #FFF;
+	border-radius: 5px;
+	padding: 15px 30px 12px 30px;
+	font-size: 1.125rem;
+	cursor: pointer;
+}
+.contato button:hover {
+	background: #99782F;
+}
+/* Contato */
+
+.contato {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 60px;
+}
+
+.contato h1 {
+	grid-column: span 2;
+}
+
+.contato-dados {
+	margin-left: 60px;
+}
+
+.contato-dados h3{
+	font-family: Georgia, serif;
+	font-weight: bold;
+	font-size: 1.125rem;
+	color: #1E1A10;
+	margin-bottom: 5px;
+}
+
+.contato-dados p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.875rem;
+	color: #807A6C;
+	margin-bottom: 30px;
+}
+
+.social-icons {
+	display: flex;
+}
+
+.social-icons li + li{
+	margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+	.contato {
+		grid-template-columns: 1fr;
+	}
+
+	.contato h1 {
+		grid-column: auto;
+	}
+
+	.contato-dados {
+		margin-left: 0;
+		margin-bottom: 30px;
+		grid-row: 2;
+	}
+}

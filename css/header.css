@@ -19,13 +19,8 @@
 }
 
 .busca #s {
-  background: #D8CFC5;
-  border-radius: 5px;
-  border: none;
   padding: 15px 40px 15px 15px;
-  font-size: 1.125rem;
   grid-area: 1/1;
-  color: #1E1A10;
 }
 
 .busca #s::placeholder {
