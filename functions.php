@@ -58,6 +58,19 @@ add_action( 'wp_enqueue_scripts', 'fa_remove_password_strength', 99999 );
 
 // include função que altera o menu da minha conta 
 include(get_template_directory() . '/inc/user-custom-menu.php');
+
 // include função que altera os do checkout
 include(get_template_directory() . '/inc/custom-checkout.php');
+
+// Troca o text do footer do email
+function dorra_change_email_footer_text($text) {
+  return $text . '
+    <p>
+      <a href="https://www.instagram.com/dorra_oficial/" target="_blank">Instagram</a>
+      <a href="https://dorra.com.br" target="_blank">Site</a>
+    </p>
+  ';
+}
+add_filter('woocommerce_email_footer_text', 'dorra_change_email_footer_text');
+
 ?>
