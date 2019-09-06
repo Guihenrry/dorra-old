@@ -1,0 +1,247 @@
+/* GRID */
+.produto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding-top: 15px; 
+}
+
+.produto-descricao {
+  grid-column: span 2;
+}
+
+@media (max-width: 800px) {
+  .produto {
+    grid-template-columns: 1fr;
+  }
+  
+  .produto-descricao {
+    grid-column: 1;
+  }
+}
+
+/* GALLERY */
+
+.produto-gallery-list {
+  display: flex;
+  margin-top: 15px;
+}
+
+.produto-gallery-list li {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.produto-gallery-list img:hover,  
+.produto-gallery-list img.active {
+  opacity: .5;
+}
+
+.produto-gallery-list li + li {
+  margin-left: 15px;
+}
+
+/* OFERTA */
+.produto-gallery-main {
+  position: relative;
+}
+
+.oferta .produto-gallery-main::after {
+  content: 'Oferta';
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.6875rem;
+  padding: 5px;
+  border-radius: 5px;
+  background: #1E1A10;
+  color: #FFF;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* DETAIL */ 
+.produto-datail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: start;
+}
+
+.produto-datail  h1 {
+  grid-column: span 2;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  color: #1E1A10;
+  margin-bottom: 15px;
+}
+
+.produto-datail .preco {
+  grid-column: span 2;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  color: #1E1A10;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 800px) {
+  .produto-datail .preco {
+    margin-bottom: 30px;
+  }
+}
+
+.produto-datail .preco del{
+  color: #807A6C;
+}
+
+/* VARIATION */
+.produto-datail .variations tr {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* ESTOQUE */
+.produto-datail .stock {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  color: #1E1A10;
+  margin: 10px 0 15px 0;
+}
+
+/* BUTTON */
+.produto-datail .button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #FFF;
+  padding: 15px;
+  max-width: 200px;
+  width: 100%;
+  background: #806019;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto-datail .button::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url('../img/icons/add.svg') no-repeat center center;
+  transition: .3s;
+}
+
+.produto-datail .button:hover::after {
+  transform: rotate(90deg);
+}
+
+.produto-datail .button:hover {
+  background: #99782F;
+}
+
+.produto-datail .button.disabled {
+  background: #DFBC7A;
+  cursor: initial;
+}
+
+.produto-datail .button.disabled:hover::after {
+  transform: none;
+}
+
+.produto-datail .qty, 
+.produto-datail .reset_variations {
+  display: none !important;
+}
+
+/* TABELA MEDIDAS */
+.produto-datail .tabela-medidas {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  color: #1E1A10;
+  text-decoration: underline;
+  padding-left: 20px;
+  background: transparent url('../img/icons/medida.svg') no-repeat center left;
+  align-self: start;
+}
+
+.produto-datail .tabela-medidas:hover {
+  color: #806019;
+}
+
+/* DESCRIÇÃO */
+.produto-descricao {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .produto-descricao {
+    grid-template-columns: 1fr;
+  }
+}
+
+.produto-descricao h3 {
+  font-family: Georgia, serif;
+  color: #1E1A10;
+  font-size: 1.5rem;
+}
+
+.produto-descricao .sku {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.6875rem;
+  color: #807A6C;
+}
+
+.produto-descricao .descricao {
+  margin: 15px 0;
+}
+
+.produto-descricao .descricao, 
+.produto-descricao li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  color: #807A6C;
+  line-height: 1.5;
+}
+
+.produto-descricao .short_description {
+  margin-bottom: 30px;
+}
+
+.produto-descricao .short_description li {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.produto-descricao .short_description li::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border: 1px solid #807A6C;
+  margin-right: 5px;
+  transform: rotate(45deg);
+}
+
+.produto-descricao .cuidado-list {
+  display: flex;
+  margin-top: 10px;
+}
+
+.produto-descricao .cuidado-list li + li {
+  margin-left: 5px;
+}
+
+/* RELACIONADO */
+.relacionados {
+  background: #E1DAD1;
+  margin-top: 60px;
+  padding: 30px 0 60px 0;
+}

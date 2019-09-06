@@ -1,19 +1,26 @@
 /* LISTA DE PRODUTOS */
-.prudutos-lista {
+.produtos-lista {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
 
 @media (max-width: 800px) {
-  .prudutos-lista {
+  .produtos-lista {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 460px) {
-  .prudutos-lista {
+  .produtos-lista {
     grid-template-columns: 1fr;
+  }
+}
+
+/* GRID PRODUTOS PAGINA DE ARQUIVO */
+@media (max-width: 1000px) {
+  .archive .produtos-lista {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -78,7 +85,7 @@
   margin: auto; 
 }
 /* OFERTA */
-.prudutos-lista .oferta::before {
+.produtos-lista .oferta::before {
   content: 'Oferta';
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
@@ -242,8 +249,16 @@
 .filtro-preco {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: minmax(60px, 70px) minmax(auto, 200px);
+  grid-template-columns: minmax(60px, 70px) minmax(auto, 100px);
   align-items: center;
+}
+
+.filtro-preco input {
+  font-size: 0.875rem;
+  padding: 10px;
+  max-width: 100px;
+  border-radius: 5px;
+  border: 1px solid #CCBEAD;
 }
 
 .filtro-preco button {
@@ -254,11 +269,6 @@
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.filtro-preco input {
-  margin-bottom: 0;
-  font-size: 0.875rem;
 }
 
 .filtro-preco button:hover {

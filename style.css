@@ -6,13 +6,15 @@ Description: Tema criado para a marca Dorrá
 */
 
 @import 'css/base.css';
-@import 'css/form.css';
 @import 'css/header.css';
 @import 'css/simpleSlide.css';
 @import 'css/slide.css';
 @import 'css/home.css';
 @import 'css/produtos.css';
+@import 'css/produto.css';
+@import 'css/modal-medidas.css';
 @import 'css/contato.css';
+@import 'css/woocommerce.css';
 @import 'css/footer.css';
 
 

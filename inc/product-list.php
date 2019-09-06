@@ -22,7 +22,7 @@ function format_products($products, $img_size = 'medium') {
 
 
 function dorra_product_list($products) { ?>
-  <ul class="prudutos-lista">
+  <ul class="produtos-lista">
     <?php foreach($products as $product) { ?>
     <li class="produto-item <?php if($product['oferta']) { echo 'oferta'; } ?>">
       <a href="<?= $product['link']; ?>">

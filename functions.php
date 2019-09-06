@@ -49,4 +49,15 @@ function remove_some_body_class($classes) {
 }
 add_filter('body_class', 'remove_some_body_class');
 
+// Remover força de senha do woocommerce
+function fa_remove_password_strength() {
+  wp_dequeue_script( 'wc-password-strength-meter' );
+  wp_deregister_script( 'wc-password-strength-meter' );
+}
+add_action( 'wp_enqueue_scripts', 'fa_remove_password_strength', 99999 );
+
+// include função que altera o menu da minha conta 
+include(get_template_directory() . '/inc/user-custom-menu.php');
+// include função que altera os do checkout
+include(get_template_directory() . '/inc/custom-checkout.php');
 ?>

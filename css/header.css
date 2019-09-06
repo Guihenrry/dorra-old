@@ -21,6 +21,11 @@
 .busca #s {
   padding: 15px 40px 15px 15px;
   grid-area: 1/1;
+  margin: 0;
+  font-size: 1.125rem;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #CCBEAD;
 }
 
 .busca #s::placeholder {
@@ -35,6 +40,7 @@
   border: none;
   background: transparent url('../img/icons/search.svg') no-repeat center center;
   cursor: pointer;
+  margin: 0;
 }
 
 .conta {
@@ -51,6 +57,12 @@
   font-size: 1.125rem;
   font-family: Georgia, serif;
   padding: 5px 0px 5px 30px;
+  border-bottom: 1px solid transparent;
+}
+
+.conta .carrinho:hover, 
+.conta .minha-conta:hover {
+  border-color: #CCBDAD;
 }
 
 .conta .minha-conta {
@@ -66,13 +78,13 @@
   position: absolute;
   top: 0;
   left: 10px;
-  font-family: Georgia, serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
   width: 16px;
   height: 16px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 50%;
   color: #FFF;
   background: #806019;
