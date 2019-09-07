@@ -30,7 +30,6 @@ function dorra_product_list($products) { ?>
           <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>">
           <span class="preco"><?= $product['price']; ?></span>
           <h2><?= $product['name']; ?></h2>
-          <p>5% de desconto via transferência</p>
         </div>
         <div class="produto-overlay">
           <span class="btn-link">Ver Mais</span>

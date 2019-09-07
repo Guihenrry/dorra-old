@@ -19,12 +19,14 @@ get_header();
     'limit' => 6,
     'orderby' => 'date',
     'order' => 'DESC',
+    'stock_status' => 'instock',
   ]);
 
   // Slide pega os 6 ultimos produtos com a tag slide
   $produtos_slide = wc_get_products([
     'limit' => 6,
     'tag' => ['slide'],
+    'stock_status' => 'instock',
   ]);
 
   // Mais Populares pega os 6 produtos mais vendidos
@@ -33,6 +35,7 @@ get_header();
     'meta_key' => 'total_sales',
     'orderby'  => 'meta_value_num',
     'order' => 'DESC',
+    'stock_status' => 'instock',
   ]);
 
 
@@ -44,6 +47,7 @@ get_header();
 
 <?php if(have_posts()) { while(have_posts()) {  the_post();  ?>
 
+<?php if ($banner) { ?>
 <section class="banner">
 	<ul data-slide="banner">
 		<?php foreach($banner as $item) { ?>
@@ -51,17 +55,20 @@ get_header();
 		<?php } ?>
 	</ul>
 </section>
+<?php } ?>
 
+<?php if (have_rows('vantagens')) { ?>
 <section class="vantagens">
 	<ul data-slide="vantagem">
-		<?php if (have_rows('vantagens')) { while(have_rows('vantagens')) { the_row(); ?>
+		<?php while(have_rows('vantagens')) { the_row(); ?>
 		<li>
 			<img src="<?php the_sub_field('icone'); ?>" alt="icone" class="icon">
 			<p><?php the_sub_field('texto'); ?></p>
 		</li>
-		<?php } } ?>
+		<?php }  ?>
 	</ul>
 </section>
+<?php } ?>
 
 <section class="container">
 	<h2 class="subtitulo separador">Novidades</h2>
@@ -87,23 +94,25 @@ get_header();
   </ul>
 </section>
 
-<section class="container">
+<section class="container mais-populares">
 	<h2 class="subtitulo separador">Mais Populares</h2>
 	<?php  dorra_product_list($data['mais_populares']); ?>
 </section>
 
+<?php if(have_rows('quote')) {  ?>
 <section class="container quotes">
   <ul data-slide="quote">
-    <?php if(have_rows('quote')) { while(have_rows('quote')) { the_row(); ?>
+    <?php while(have_rows('quote')) { the_row(); ?>
     <li>
       <blockquote>
         <p><?php the_sub_field('comentario'); ?></p>
         <cite><?php the_sub_field('autor'); ?></cite>
       </blockquote>
     </li>
-    <?php } } ?>
+    <?php }  ?>
   </ul>
 </section>
+<?php } ?>
 
 <?php } } ?>
 <?php get_footer(); ?>

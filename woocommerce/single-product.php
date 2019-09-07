@@ -135,7 +135,7 @@ if(have_posts()) { while(have_posts()) { the_post();
     <h2>Tabela de Medidas</h2>
     <img src="<?= $img_url . '/img-medidas.jpg' ?>" alt="medidas">
     <div class="medidas-info">
-      <p>Compare as medidas do seu corpo com esta tabela. Aqui neste site você pode <a href="#">imprimir uma fita metrica</a></p>
+      <p>Compare as medidas do seu corpo com esta tabela. Aqui neste site você pode <a href="<?= get_template_directory_uri(); ?>/fita.pdf" target="_blank">imprimir uma fita metrica</a></p>
       <table>
         <tr>
           <th>Tamanho</th>

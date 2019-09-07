@@ -18,7 +18,29 @@
 	color: #f64540;
 }
 
-.contato button {
+.contato .form label {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.125rem;
+	color: #1E1A10;
+	margin-bottom: 5px;
+}
+
+.contato .form input,
+.contato .form textarea {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.125rem;
+	color: #1E1A10;
+	display: block;
+	padding: 15px;
+  border-radius: 5px;
+	border: 1px solid #CCBEAD;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+
+.contato .form button {
 	border: none;
 	background: #806019;
 	color: #FFF;
@@ -27,7 +49,7 @@
 	font-size: 1.125rem;
 	cursor: pointer;
 }
-.contato button:hover {
+.contato .form button:hover {
 	background: #99782F;
 }
 /* Contato */

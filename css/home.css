@@ -10,6 +10,9 @@
 }
 
 /* VANTAGENS */
+.vantagens {
+  padding: 15px;
+}
 .vantagens li {
   display: flex;
   justify-content: center;
@@ -26,10 +29,14 @@
   color: #1E1A10;
   margin-right: 10px;
 }
+/* Mais Populares */
+.mais-populares {
+  margin-bottom: 60px;
+}
 
 /* QUOTES */
 .quotes {
-  padding: 120px 0px;
+  padding: 60px 0px 120px 0px;
 }
 .quotes p {
   font-family: Georgia, serif;
