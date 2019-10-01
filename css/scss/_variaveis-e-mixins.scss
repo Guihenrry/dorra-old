@@ -1,0 +1,48 @@
+// Cores
+$preto: #1E1A10;
+$marrom-escuro: #4D483D;
+$cinza: #807A6C;
+
+$bege-escuro: #CCBEAD;
+$bege: #D8CFC5;
+$bege-medio: #E1DAD1;
+$bege-claro: #EBE5DF;
+$branco: #FFFFFF;
+
+$dourado: #806019; // cor de contarste 
+$dourado-medio: #99782F; // utilizado geralmente no hover
+$dourado-claro: #DFBC7A;
+
+$verde: olivedrab;
+$vermelho: orangered;
+
+// Tipografia
+@function rem($pixel){
+  @return $pixel / 16 + rem;
+}
+
+$font-1: 'Roboto', sans-serif;
+$font-2: Georgia, serif;
+
+@mixin type-1($size) {
+  font-family: $font-1; 
+  line-height: 1.5;
+  @if $size == 11 {
+    font-size: rem(11);
+  } @else if $size == 14 {
+    font-size: rem(14);
+  } @else if $size == 18 {
+    font-size: rem(18);
+  }
+}
+
+@mixin type-2($size) {
+  font-family: $font-2;
+  @if $size == 18 {
+    font-size: rem(18);
+  } @else if $size == 24 {
+    font-size: rem(24);
+  } @else if $size == 32 {
+    font-size: rem(32);
+  }
+}

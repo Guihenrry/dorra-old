@@ -36,7 +36,7 @@
   grid-template-columns: 210px 1fr;  
   align-content: start;
   grid-gap: 30px;
-  background: #FFF;
+  background: $branco;
   padding: 30px;
   position: relative;
   max-width: 720px;
@@ -64,26 +64,24 @@
 
 /* MEDIDAS INFO */
 .medidas-info p {
-  font-family: 'Roboto', sans-serif; 
-  font-size: 0.875rem;
-  color: #4D483D;
+  color: $marrom-escuro;
   margin-bottom: 30px;
+  @include type-1(14);
 }
 
 
 .medidas-info a {
   text-decoration: underline;
-  color: #4D483D;
+  color: $marrom-escuro;
 }
 
 .medidas-info a:hover {
-  color: #1E1A10;
+  color: $preto;
 }
 
 .medidas-info table {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
   text-align: center;
+  @include type-1(14);
 }
 
 .medidas-info table tr {
@@ -92,7 +90,7 @@
 }
 
 .medidas-info table tr:nth-child(odd) {
-  background: #EBE5DF;
+  background: $bege-claro;
 }
 
 .medidas-info table th,
@@ -101,8 +99,8 @@
 }
 
 .medidas-info table th {
-  background: #4D483D;
-  color: #FFF;
+  background: $marrom-escuro;
+  color: $branco;
   font-weight: normal;
 }
 
@@ -110,8 +108,8 @@
 .modal-container .fechar {
   padding: 5px;
   min-width: 60px;
-  border: 1px solid #1E1A10;
-  color: #1E1A10;
+  border: 1px solid $preto;
+  color: $preto;
   background: transparent;
   position: absolute;
   top: 10px;
@@ -127,13 +125,13 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: transparent url('../img/icons/close.svg') no-repeat center center;
+  background: transparent url('img/icons/close.svg') no-repeat center center;
   margin-left: 5px;
   transition: .3s;
 }
 
 .modal-container .fechar:hover {
-  background: #EBE5DF;
+  background: $bege-claro;
 }
 
 .modal-container .fechar:hover::after {

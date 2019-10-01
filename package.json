@@ -4,7 +4,9 @@
   "main": "index.php",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "live": "browser-sync start --proxy localhost/dorra/ --files **/* --no-inject-changes",
+    "sass": "sass --watch css/scss/:./"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

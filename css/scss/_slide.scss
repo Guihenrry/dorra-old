@@ -45,22 +45,20 @@
 }
 
 .slide-info h2 {
-  font-family: Georgia, serif;
-  font-size: 1.125rem;
   font-weight: 400;
-  color: #FFF;
+  color: $branco;
   margin-top: 5px;
+  @include type-2(18);
 }
 
 .slide-info .slide-preco {
-  font-family: Georgia, serif;
-  font-size: 1.5rem;
   font-weight: 400;
-  color: #FFF;
+  color: $branco;
+  @include type-2(24);
 }
 
 .slide-info .slide-preco del {
-  color: #9B9792;
+  color: $bege; 
 }
 
 .slide-info .btn-link {
