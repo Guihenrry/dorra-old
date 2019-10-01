@@ -1,25 +1,23 @@
 /* GERAL */
 .woocommerce {
-  color: #1E1A10;
+  color: $preto;
 }
 
 .woocommerce a {
   text-decoration: underline;
-  color: #1E1A10;
+  color: $preto;
 }
 
 .woocommerce a:hover {
-  color: #806019;
+  color: $dourado;
 }
 
 /* NOTIFICAÇÕES */
 .woocommerce-message, 
 .woocommerce-info,
 .woocommerce-error {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.125rem;
-  background: #FFF;
-  color: #1E1A10;
+  background: $branco;
+  color: $preto;
   border: none;
   padding: 15px;
   border-left: 4px solid transparent;
@@ -28,11 +26,11 @@
 
 .woocommerce-message, 
 .woocommerce-info {
-  border-color: olivedrab;
+  border-color: $verde;
 }
 
 .woocommerce-error {
-  border-color: orangered;
+  border-color: $vermelho;
 }
 
 
@@ -46,25 +44,22 @@
 .woocommerce-message .button , 
 .woocommerce-info .button,
 .woocommerce-error .button {
-  color: #1E1A10;
+  color: $preto;
 }
 
 .woocommerce-message .button:hover , 
 .woocommerce-info .button:hover ,
 .woocommerce-error .button:hover {
-  color: #806019;
+  color: $dourado;
 }
 
 /* FORMULARIOS */
-.woocommerce label {
-  font-family: 'Roboto';
-  font-size: 1.125rem;
-}
+
 .woocommerce .input-text {
-  font-size: 1.125rem !important;
   padding: 15px !important;
   border-radius: 5px !important;
-  border: 1px solid #CCBEAD !important;
+  border: 1px solid $bege-escuro !important;
+  @include type-1(18);
 }
 
 .woocommerce form .form-row {
@@ -72,23 +67,23 @@
 }
 
 .woocommerce button.button {
-  font-size: 1.125rem !important;
-  background: #807A6C !important;
+  background: $cinza !important;
   border: none !important;
-  color: #FFF !important;
+  color: $branco !important;
   padding: 15px !important;
   border-radius: 5px !important;
   min-height: 51px !important;
   text-transform: capitalize;
+  @include type-1(18);
 }
 
 .woocommerce button.button:hover {
-  background: #4D483D !important;
-  color: #FFF !important;
+  background: $marrom-escuro !important;
+  color:  $branco !important;
 }
 
 .woocommerce button.button:disabled {
-  background: #807A6C !important;
+  background: $cinza !important;
 }
 
 
@@ -116,13 +111,13 @@
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   text-transform: capitalize;
-  background: #806019;
-  color: #FFF;
+  background: $dourado;
+  color: $branco;
 }
 .woocommerce-cart a.button:hover,
 .woocommerce-cart a.button.alt:hover {
-  background: #99782F;
-  color: #FFF;
+  background: $dourado-medio;
+  color: $branco;
 }
 /* SHOP TABLE  */
 .woocommerce-cart .shop_table {
@@ -139,22 +134,21 @@
 }
 
 .woocommerce-cart .shop_table thead {
-  background: #D8CFC5;
+  background: $bege;
 }
 
 .woocommerce-cart .shop_table .actions {
-  background: #D8CFC5;
+  background: $bege;
 }
 
 /* CART TOTALS */
 .woocommerce-cart .cart_totals h2{
-  font-family: Georgia, serif;
   margin-bottom: 15px;
-  font-size: 1.5rem;
+  @include type-2(24);
 }
 
 .woocommerce-cart .cart_totals th {
-  background: #D8CFC5;
+  background: $bege;
 }
 
 
@@ -182,7 +176,7 @@
 
   .woocommerce a.remove:hover {
     color: orangered !important;
-    background: #D8CFC5;
+    background: $bege;
   }
 
   .woocommerce .product-remove {
@@ -197,15 +191,14 @@
 }
 
 .woocommerce .checkout h3 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.125rem;
-  background: #1E1A10;
-  color: #FFF;
+  background: $preto;
+  color: $branco;
   padding: 15px;
   font-weight: 400;
   border-radius: 4px;
   margin-bottom: 10px;
   text-transform: capitalize;
+  @include type-1(18);
 }
 
 .woocommerce .woocommerce-checkout .shop_table  {
@@ -226,8 +219,8 @@
 
 /* PAGAMENTO */
 .woocommerce #payment {
-  background: #E1DAD1;
-  border: 3px solid #CCBDAD;
+  background: $bege-medio;
+  border: 3px solid $bege-escuro;
   border-radius: 0;
   margin-bottom: 60px;
   font-family: 'Roboto', sans-serif;
@@ -238,10 +231,10 @@
 }
 
 .woocommerce-checkout #payment div.payment_box {
-  background: #D8CFC5;
+  background: $bege;
 }
 .woocommerce-checkout #payment div.payment_box::before {
-  border-bottom-color: #D8CFC5;
+  border-bottom-color: $bege;
 }
 
 .woocommerce #payment #place_order {
@@ -249,16 +242,16 @@
   float: none;
   font-weight: 400;
   padding: 15px 20px !important;
-  background: #806019 !important;
+  background: $dourado !important;
 }
 .woocommerce #payment #place_order:hover {
-  background: #99782F !important;
+  background: $dourado-medio !important;
 }
 
 /* PAGSEGURO */
 .woocommerce #pagseguro-payment-form {
   border: none;
-  color: #1E1A10;
+  color: $preto;
 }
 
 .woocommerce #payment div.payment_box ::-webkit-input-placeholder {
@@ -281,10 +274,9 @@
 }
 
 .woocommerce .woocommerce-privacy-policy-text {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
-  color: #807A6C;
+  color: $cinza;
   margin-bottom: 10px;
+  @include type-1(14);
 }
 
 /* PERDEU A SENHA */
@@ -292,8 +284,7 @@
   margin-bottom: 30px;
 }
 .woocommerce-ResetPassword > p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
+  @include type-1(14);
 }
 
 .woocommerce-lost-password .woocommerce-message + p {
@@ -304,8 +295,8 @@
 
 /* MINHA CONTA */
 .woocommerce-account h2 {
-  font-size: 1.5rem;
   margin: 10px 0;
+  @include type-2(24);
 }
 
 .woocommerce-account.logged-in .woocommerce {
@@ -334,14 +325,12 @@
 
 /* MINHA CONTA SIDEMENU */
 .woocommerce-MyAccount-navigation ul {
-  background: #4C483D;
+  background: $marrom-escuro;
 }
 
 .woocommerce-MyAccount-navigation a {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.125rem;
   display: block;
-  color: #FFF;
+  color: $branco;
   text-decoration: none;
   padding: 15px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
@@ -349,8 +338,8 @@
 
 .woocommerce-MyAccount-navigation li.is-active a,
 .woocommerce-MyAccount-navigation a:hover {
-  background-color: #806019;
-  color: #FFF;
+  background-color: $dourado;
+  color: $branco;
 }
 
 /* MINHA CONTA CONTENT */
@@ -359,7 +348,6 @@
 }
 
 .woocommerce-MyAccount-content P {
-  font-size: 1.125rem;
   margin-bottom: 1rem;
 }
 
@@ -377,19 +365,19 @@
 }
 
 .woocommerce-MyAccount-content .woocommerce-MyAccount-orders thead{
-  background: #D8CFC5;
+  background: $bege;
 }
 
 .woocommerce-MyAccount-content .woocommerce-MyAccount-orders thead th{
-  font-size: 1rem;
   padding: 10px;
+  @include type-1(18);
 }
 
 
 .woocommerce-MyAccount-content .button {
-  background: #807A6C !important;
+  background: $cinza !important;
   border: none;
-  color: #FFF !important;
+  color: $branco !important;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -401,8 +389,8 @@
 }
 
 .woocommerce-MyAccount-content .button:hover {
-  background: #4D483D !important;
-  color: #FFF !important;  
+  background: $marrom-escuro !important;
+  color:  $branco !important;  
 }
 
 /* RASTREIO CORREIO */
@@ -456,28 +444,27 @@
 }
 
 .woocommerce-order-received h2 {
-  font-family: Georgia, serif;
-  font-size: 1.25rem;
   margin: 10px 0;
+  @include type-2(18);
 }
 
 .woocommerce-order-received .woocommerce-thankyou-order-received {
-  color: #fff;
-  background: #806019;
+  color: $branco;
+  background: $dourado;
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 30px;
 }
 
 .woocommerce-order-received ul.order_details {
-  background: #eee;
+  background: $cinza;
   padding: 15px;
   margin-bottom: 30px;
-  background: #D8CFC5;
+  background: $bege;
 }
 
 .woocommerce-order-received ul.order_details li {
-  border-right-color: #807A6C;
+  border-right-color: $cinza;
   margin: 10px;
 }
 
@@ -487,13 +474,13 @@
 
 .woocommerce-page .woocommerce-message .button {
   font-weight: normal;
-  color: #fff;
-  background-color: #807A6C;
+  color: $branco;
+  background-color: $cinza;
 }
 
 .woocommerce-page .woocommerce-message .button:hover {
-  color: #fff;
-  background-color: #4D483D;
+  color: $branco;
+  background-color: $marrom-escuro;
 }
 
 /* POLITICA DE PRIVACIDADE */
@@ -502,15 +489,11 @@
   margin-bottom: 30px;
 }
 .privacy-policy h2 {
-  font-family: Georgia, serif;
-  font-size: 1.5rem;
-  color: #1E1A10;
-  margin-bottom: 15px;
+  color: $preto;
+  margin-bottom: 1rem;
+  @include type-2(24);
 }
 .privacy-policy p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5;
-  color: #1E1A10;
-  margin-bottom: 15px;
+  color: $preto;
+  margin-bottom: 1rem;
 }

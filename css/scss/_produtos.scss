@@ -30,30 +30,23 @@
 }
 
 .produto-item .preco {
-  font-family: Georgia, serif;
-  font-size: 1.125rem;
-  color: #1E1A10;
-  background: #CCBDAD;
+  color: $preto;
+  background: $bege-escuro;
   padding: 10px 15px;
   position: relative;
   top: -15px;
+  @include type-2(18);
 }
 
 .produto-item .preco del{
-  color: #807A6C;
+  color: $cinza;
 }
 
 .produto-item h2{
-  font-family: Georgia, serif;
-  font-size: 1.125rem;
-  color: #1E1A10;
+  color: $preto;
+  @include type-2(18);
 }
 
-.produto-item p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
-  color: #8A8274;
-}
 
 /* OVERLAY */
 .produto-item a {
@@ -88,23 +81,21 @@
 .produtos-lista .oferta::before {
   content: 'Oferta';
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.6875rem;
   padding: 5px;
   border-radius: 5px;
-  background: #1E1A10;
-  color: #FFF;
+  background: $preto;
+  color: $branco;
   position: absolute;
   top: 10px;
   left: 10px;
+  @include type-1(11);
 }
 
 /* BREADCRUMB */
 .breadcrumb {
   margin: 15px 0;
-  font-family: 'Roboto', sans-serif ;
-  font-size: 0.875rem;
-  color: #332D21;
+  color: $marrom-escuro;
+  @include type-1(14);
 }
 
 .woocommerce-breadcrumb {
@@ -112,7 +103,7 @@
 }
 
 .woocommerce-breadcrumb a {
-  color: #332D21;
+  color: $marrom-escuro;
 }
 
 /* ARQUIVO */
@@ -137,16 +128,14 @@
 
 .pagination .page-numbers {
   padding: 5px 10px;
-  background: #E1DAD1;
-  border: 3px solid #E1DAD1; 
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.125rem;
-  color: #1E1A10;
+  background: $bege-medio;
+  border: 3px solid $bege-medio; 
+  color: $preto;
 }
 
 .pagination .current, 
 .pagination .page-numbers:hover {
-  border: 3px solid #CCBDAD; 
+  border: 3px solid $bege-escuro; 
 }
 
 .pagination .next,
@@ -158,15 +147,15 @@
 .pagination .next:hover, 
 .pagination .prev:hover {
   border: none;
-  color: #CCBDAD;
+  color: $bege-escuro;
 }
 
 /* FILTRO */
 .filtro {
-  background: #E1DAD1;
+  background: $bege-medio;
   padding: 30px;
   align-self: start;
-  border: 3px solid #CCBDAD;
+  border: 3px solid $bege-escuro;
 }
 
 @media (max-width: 800px) {
@@ -175,39 +164,35 @@
   }
   .filtro::before {
     content: 'Filtrar Resultados';
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    color: #1E1A10;
+    color: $preto;
     display: block;
     margin-bottom: 30px;
   }
 }
 
 .filtro-item h2 {
-  font-family: Georgia, serif;
   font-weight: bold;
-  font-size: 1.125rem;
-  color: #1E1A10;
+  color: $preto;
+  @include type-2(18);
 }
 
 .filtro-item ul {
-  border-bottom: 3px solid #CCBDAD !important;
-  border-top: 3px solid #CCBDAD !important;
+  border-bottom: 3px solid $bege-escuro !important;
+  border-top: 3px solid $bege-escuro !important;
   padding: 10px 0 !important;
   margin: 10px 0 !important;
 }
 
 .filtro-item a {
   display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
-  color: #1E1A10;
+  color: $preto;
   margin-bottom: 5px;
+  @include type-1(14);
 }
 
 .filtro-item li a:hover,
 .filtro-item li.current-menu-item a {
-  color: #99782F;
+  color: $dourado-medio;
   font-weight: bold;
 }
 
@@ -231,18 +216,18 @@
   display: block;
   width: 15px;
   height: 15px;
-  border: 3px solid #CCBDAD;
+  border: 3px solid $bege-escuro;
 }
 
 .filtro-attribute li a:hover,
 .filtro-attribute li.chosen a {
-  color: #99782F;
+  color: $dourado-medio;
   font-weight: bold;
 }
 
 .filtro-attribute li a:hover::after,
 .filtro-attribute li.chosen a::after {
-  background: #99782F;
+  background: $dourado-medio;
 }
 
 /* FILTRO PRECO */
@@ -254,25 +239,25 @@
 }
 
 .filtro-preco input {
-  font-size: 0.875rem;
   padding: 10px;
   max-width: 100px;
   border-radius: 5px;
-  border: 1px solid #CCBEAD;
+  border: 1px solid $bege-escuro;
+  @include type-1(14);
 }
 
 .filtro-preco button {
   grid-column: span 2;
-  background: #807A6C;
+  background: $cinza;
   border: none;
-  color: #FFF;
+  color: $branco;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .filtro-preco button:hover {
-  background: #4D483D;
+  background: $marrom-escuro;
 }
 
 /* ORDEM */

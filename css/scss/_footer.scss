@@ -1,5 +1,5 @@
 .footer {
-  background: #D8CFC5;
+  background: $bege;
   padding-top: 30px;
 }
 
@@ -15,18 +15,15 @@
 }
 
 .footer-info h3 {
-  font-family: Georgia, serif;
   font-weight: bold;
-  font-size: 1.125rem;
-  color: #1E1A10;
+  color: $preto;
   margin-bottom: 10px;
+  @include type-2(18);
 }
 
 .footer p, .footer a {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-size: 0.875rem;
-  color: #332D21;
+  color: $marrom-escuro;
+  @include type-1(14);
 }
 
 /* SOBRE */
@@ -49,17 +46,17 @@
   display: inline-block;
   width: 3px;
   height: 3px;
-  border: solid 1px #332D21;
+  border: solid 1px $marrom-escuro;
   transform: rotate(45deg);
   margin-right: 5px;
 }
 
 .mapa-do-site a:hover {
-  color: #99782F;
+  color: $dourado-medio;
 }
 
 .mapa-do-site a:hover::before {
-  background: #99782F;
+  background: $dourado-medio;
 }
 
 /* PAGAMENTO */
@@ -76,10 +73,9 @@
 .footer-copy {
   display: block;
   padding: 15px;
-  background: #4C483D;
-  font-family: Georgia, serif;
-  font-size: 0.875rem;
+  background: $marrom-escuro;
   text-align: center;
-  color: #EBE5DF;
+  color: $bege-claro;
   margin-top: 30px;
+  @include type-2(18);
 }

@@ -4,53 +4,48 @@
 }
 
 #form-erro span, #form-send span  {
-	font-size: 18px;
-	line-height: 25px;
 	margin-bottom: 10px;
 	display: block;
 }
 
 #form-send {
-	color: #31aa39;
+	color: $verde;
 }
 
 #form-erro {
-	color: #f64540;
+	color: $vermelho;
 }
 
 .contato .form label {
 	display: block;
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.125rem;
-	color: #1E1A10;
+	color: $preto;
 	margin-bottom: 5px;
 }
 
 .contato .form input,
 .contato .form textarea {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.125rem;
-	color: #1E1A10;
+	color: $preto;
 	display: block;
 	padding: 15px;
   border-radius: 5px;
-	border: 1px solid #CCBEAD;
+	border: 1px solid $bege-escuro;
 	width: 100%;
 	margin-bottom: 15px;
+	@include type-1(18);
 }
 
 
 .contato .form button {
 	border: none;
-	background: #806019;
-	color: #FFF;
+	background: $dourado;
+	color: $branco;
 	border-radius: 5px;
 	padding: 15px 30px 12px 30px;
-	font-size: 1.125rem;
 	cursor: pointer;
+	@include type-1(18);
 }
 .contato .form button:hover {
-	background: #99782F;
+	background: $dourado-medio;
 }
 /* Contato */
 
@@ -69,18 +64,16 @@
 }
 
 .contato-dados h3{
-	font-family: Georgia, serif;
 	font-weight: bold;
-	font-size: 1.125rem;
-	color: #1E1A10;
+	color: $preto;
 	margin-bottom: 5px;
+	@include type-2(18);
 }
 
 .contato-dados p {
-	font-family: 'Roboto', sans-serif;
-	font-size: 0.875rem;
-	color: #807A6C;
+	color: $cinza;
 	margin-bottom: 30px;
+	@include type-1(14);
 }
 
 .social-icons {

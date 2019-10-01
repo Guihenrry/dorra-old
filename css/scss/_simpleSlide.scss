@@ -28,11 +28,11 @@
   border: none;
   padding: 0px;
   border-radius: 6px;
-  background: #4C483D;
+  background: $marrom-escuro;
   text-indent: -100px;
   overflow: hidden;
   cursor: pointer;
 }
 [data-slide-nav] > button.active {
-  background: #99782F;
+  background: $dourado-medio;
 }
